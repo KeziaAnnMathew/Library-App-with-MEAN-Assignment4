@@ -1,0 +1,11 @@
+Heroku Hosted Link:https://atheneaum.herokuapp.com/
+Github Repo Link:https://github.com/KeziaAnnMathew/CaseStudy2-LibraryApp
+
+Login credentials for Admin Privileges( Add, Edit, Delete):
+Username/Email: admin
+Password: admin
+
+Have also created an additional user(if needed),
+Credentials:
+Username/Email: JohnD or JohnD@mail.com
+Password: John@123

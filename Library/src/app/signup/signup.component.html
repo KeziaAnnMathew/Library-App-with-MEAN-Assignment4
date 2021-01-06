@@ -1,0 +1,139 @@
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a routerLink='/' class="navbar-brand">Home</a>
+      </div>
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-right navbar-nav">
+         <li>
+          <a routerLink="/login">Login</a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Sign Up
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <!-- <div class="col-md-5">
+          <div class="well well-lg">  -->
+            <div class="row">
+              <div class="col-sm-12">
+                
+              
+              </div>
+            <!-- </div>
+          </div> -->
+        </div>
+      </div> 
+    </div><!-- /cont -->  
+  </div>
+  
+  
+  <div class="container">
+    <div class="row row2" style="padding-top: 3em;">
+      <div class="col-md-4"></div>
+      <div class="col-md-6"> 
+        
+        <div class="panel newpanel">
+          <div class="panel-body">
+            
+            
+            
+            <!--/stories-->
+            <div class="row">    
+              <br>
+              <div class="col-md-12 col-sm-5 mymar">
+                  <form id="form-main" [formGroup]="registerForm" (ngSubmit)="Adduser()" novalidate>
+                      <div class="form-group">
+                          <input type="text" class="form-control" name="fname" id="fname" formControlName="fname" [(ngModel)]="userItem.fname" placeholder="First Name" required >
+                          <div [class.d-none] *ngIf="registerForm.get('fname').touched && registerForm.get('fname').invalid"
+                        class="alert-danger">
+                         <div>
+                             This is a Required field
+                         </div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                          <input type="text" class="form-control" name="lname" id="lname" formControlName="lname" [(ngModel)]="userItem.lname" placeholder="Last Name" pattern="[a-zA-Z][a-zA-Z ]{1,}" required >
+                          <div [class.d-none] *ngIf="registerForm.get('lname').touched && registerForm.get('lname').invalid"
+                          class="alert-danger">
+                           <div>
+                               This is a Required field
+                           </div>
+                           </div>
+                      </div>
+                      <div class="form-group">
+                          <input type="text" class="form-control" name="username"id="username" formControlName="username" [(ngModel)]="userItem.username" placeholder="Username" required >
+                          <div [class.d-none] *ngIf="registerForm.get('username').touched && registerForm.get('username').invalid"
+                          class="alert-danger">
+                           <div>
+                               This is a Required field
+                           </div>
+                           </div>
+                      </div>
+                      <div class="form-group">
+                          <input type="email" class="form-control" name="email" id="email" formControlName="email" [(ngModel)]="userItem.email" placeholder="Email" required >
+                          <div [class.d-none] *ngIf="registerForm.get('email').touched && registerForm.get('email').invalid"
+                          class="alert-danger">
+                           <div *ngIf="registerForm.get('email').errors.required">
+                            This is a Required field
+                           </div>
+                           <div *ngIf="registerForm.get('email').errors.email">
+                            Enter a Valid Email
+                           </div>
+                           </div>
+                      </div>
+                      <div class="form-group inner-addon right-addon">
+                        <div><mat-icon class="fa" (click)="hide= !hide">{{hide ? 'visibility':'visibility_off'}}</mat-icon></div>
+                          <input matInput type="password" class="form-control" name="password" id="password" formControlName="password" [(ngModel)]="userItem.password" placeholder="Password" [type]="hide? 'password':'text'" required/>
+                          <div [class.d-none] *ngIf="registerForm.get('password').touched && registerForm.get('password').invalid"
+                          class="alert-danger">
+                           <div *ngIf="registerForm.get('password').errors.required">
+                            This is a Required field
+                           </div>
+                           <div *ngIf="registerForm.get('password').errors.pattern">
+                                Password Not Strong
+                           </div>
+                           </div>
+                        </div>
+                      <div class="ctnt"><p class="txt1"></p><p class=txt></p></div>
+                      <div class="form-group inner-addon right-addon">
+                        <div><mat-icon class="fa" (click)="hidea= !hidea">{{hidea ? 'visibility':'visibility_off'}}</mat-icon></div>
+                          <input matInput type="password" class="form-control" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" formControlName="confirmpassword" [(ngModel)]="confirmpassword" [type]="hidea? 'password':'text'" required/>
+                          <div [class.d-none] *ngIf="registerForm.get('confirmpassword').touched && registerForm.get('confirmpassword').invalid"
+                          class="alert-danger">
+                           <div *ngIf="registerForm.get('confirmpassword').errors.required">
+                            This is a Required field
+                           </div>
+                           <div *ngIf="registerForm.get('confirmpassword').hasError('passwordMismatch')">
+                                Passwords does not Match
+                           </div>
+                           </div>
+                        </div>
+                      <br>
+                      <div class="text-center"><button type="submit" mat-button class="btn btn-success butn" [disabled]="registerForm.invalid">Sign Up</button></div><br>
+                      <div class="text-center"><p>Already a User?<a href="/login">Log in</a></p></div>
+                   </form>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>

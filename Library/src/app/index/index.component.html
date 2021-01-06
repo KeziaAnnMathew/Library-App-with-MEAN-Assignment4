@@ -1,0 +1,112 @@
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a routerLink='/books' *ngIf="libraryService.loggedIn()">Books</a>
+        </li>
+        <li>
+          <a routerLink='/authors' *ngIf="libraryService.loggedIn()">Authors</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
+        </li>
+        <li>
+          <a routerLink="/login" *ngIf="!libraryService.loggedIn()">Login</a>
+       </li>
+       <li>
+        <a routerLink="/signup" *ngIf="!libraryService.loggedIn()">Signup</a>
+      </li>
+      <li><a *ngIf="libraryService.loggedIn()" (click)="logoutUser()">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>{{title}}
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <!-- <div class="col-md-5">
+          <div class="well well-lg">  -->
+            <div class="row">
+              <div class="col-sm-8">
+                
+              
+              </div>
+            </div>
+          <!-- </div>
+        </div> -->
+      </div> 
+    </div><!-- /cont -->
+    
+    <div class="container">
+      <div class="row row1">
+        <div class="col-md-8">
+          <div class="top-spacer"></div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    
+  </div>
+  
+  
+  <div class="container">
+    <div class="row row1">
+      
+      <div class="col-md-8"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            
+            
+            
+            <!--/stories-->
+            <!-- <%for(i=0;i<books.length;i++){%> -->
+            <div class="row" *ngFor='let book of books'>    
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-title" href="#"><img [alt]="book.title" [src]='book.img' [style.width.px]=100 [style.height.px]=100 class="img-circle"></a>
+              </div>
+              <div class="col-md-10 col-sm-9">
+                <h3>{{book.title}}</h3>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <h4><span class="label label-default">{{book.genre}}</span></h4><h4>
+                    <small style="font-family:courier,'new courier';" class="text-muted"> {{book.author}}<br></small>
+                    </h4></div>
+                  <div class="col-xs-3"></div>
+                </div>
+                <br><br>
+              </div>
+            </div>
+            <!-- <%}%> -->
+  
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+                             

@@ -1,0 +1,80 @@
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a routerLink='/' class="navbar-brand">Home</a>
+      </div>
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-right navbar-nav">
+         <li>
+          <a routerLink="/signup">Signup</a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Log In
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <!-- <div class="col-md-5">
+          <div class="well well-lg">  -->
+            <div class="row">
+              <div class="col-sm-12">
+                
+              
+              </div>
+            <!-- </div>
+          </div> -->
+        </div>
+      </div> 
+    </div><!-- /cont -->
+  </div>
+  
+  
+  <div class="container">
+    <div class="row row2">
+      <div class="col-md-4"></div>
+      <div class="col-md-6"> 
+        
+        <div class="panel newpanel">
+          <div class="panel-body">
+            
+            
+            
+            <!--/stories-->
+            <div class="row">    
+              <div class="col-md-12 col-sm-5 mymar">
+                  <form  id="form-main" (ngSubmit)="validateUser()">
+                    <div [class.d-none] class="alert alert-danger" *ngIf="errorval">User Not Found</div>
+                      <div class="form-group">
+                          <input type="text" class="form-control" name="username" id="username" placeholder="Username/Email" [(ngModel)]="user.uname" required >
+                        </div>
+                        <div class="form-group inner-addon right-addon">
+                          <div><mat-icon class="fa" (click)="hide= !hide">{{hide ? 'visibility':'visibility_off'}}</mat-icon></div>
+                          <input matInput type="password" class="form-control" name="password" id="password" placeholder="Password"  [type]="hide? 'password':'text'" [(ngModel)]="user.password" required/>
+                        </div>
+                      <br>
+                      <div class="text-center"><button type="submit" class="btn btn-success butn">Log In</button></div><br>
+                      <div class="text-center"><p>New User?<a routerLink="/signup"> Create an Account</a></p></div>
+                  </form>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
