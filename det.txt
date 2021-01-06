@@ -1,0 +1,22 @@
+Github link:  https://github.com/KeziaAnnMathew/Library-App-with-MEAN-Assignment4
+
+
+
+Please do run backend(Libraryapp Backend) and frontend(Library) separately after installing required packages.
+
+Login credentials for Admin Privileges( Add, Edit, Delete):
+
+Username/Email: admin
+
+Password: admin
+
+
+
+Have also created an additional user(if needed),
+
+Credentials:
+
+Username/Email: JohnD or johnd@mail.com
+
+Password: John@123
+
