@@ -30,7 +30,7 @@ function router(){
         img='http://localhost:3000/images/' + req.file.filename;
         var item = {
             name:req.body.name,
-            author:req.body.author,
+            book:req.body.book,
             genre:req.body.genre,
             details:req.body.details,
             img:img,

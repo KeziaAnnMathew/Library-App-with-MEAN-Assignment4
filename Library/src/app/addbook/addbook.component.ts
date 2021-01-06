@@ -34,7 +34,7 @@ export class AddbookComponent implements OnInit {
     // this.addForm.get('img').setValue(this.selectedFile)
     this.libraryService.newBook(this.bookItem,this.selectedFile);
     alert("successfully added");
-    this.router.navigate(['/']);
+    this.router.navigate(['/books']);
   }
   logoutUser(){
     localStorage.removeItem('token');

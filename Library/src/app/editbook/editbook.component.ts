@@ -41,7 +41,7 @@ export class EditbookComponent implements OnInit {
   EditBookfn(){
     this.libraryService.editBook(this.id,this.bookItem,this.selectedFile);
     alert("successfully edited");
-    this.router.navigate(['/']);
+    this.router.navigate(['/books']);
   }
   logoutUser(){
     localStorage.removeItem('token');
